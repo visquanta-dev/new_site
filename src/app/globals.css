@@ -7903,3 +7903,15 @@ body {
     align-items: center;
   }
 }
+/* SPACING FIX */
+section > div {
+  padding-left: 64px !important;
+  padding-right: 64px !important;
+}
+
+@media (max-width: 768px) {
+  section > div {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
