@@ -7,20 +7,12 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] } 
-  }
+  visible: { opacity: 1, y: 0 }
 };
 
 const fadeInScale = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: { 
-    opacity: 1, 
-    scale: 1, 
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] } 
-  }
+  visible: { opacity: 1, scale: 1 }
 };
 
 const staggerContainer = {
@@ -33,13 +25,11 @@ const staggerContainer = {
 
 const cardVariant = {
   hidden: { opacity: 0, y: 30, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
-  }
+  visible: { opacity: 1, y: 0, scale: 1 }
 };
+
+export default function AutoMasterSection() {
+  // ... rest of the file stays exactly the same
 
 export default function AutoMasterSection() {
   const sectionRef = useRef<HTMLElement>(null);
