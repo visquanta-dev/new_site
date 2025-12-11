@@ -83,7 +83,7 @@ export default function VideoSection() {
                   background: 'linear-gradient(90deg, #f97316, rgba(249,115,22,0.2))',
                 }} />
                 <span style={{
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                  fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                   fontSize: '12px',
                   fontWeight: 600,
                   color: '#f97316',
@@ -102,7 +102,7 @@ export default function VideoSection() {
                 lineHeight: 1.1,
                 letterSpacing: '-0.03em',
                 margin: '0 0 28px 0',
-                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               }}>
                 What Makes{' '}
                 <span style={{
@@ -124,7 +124,7 @@ export default function VideoSection() {
                   color: 'rgba(255,255,255,0.6)',
                   lineHeight: 1.8,
                   margin: '0 0 20px 0',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                  fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                 }}>
                   Hear directly from our Chief Sales Officer about why dealerships
                   choose Visquanta over disconnected tools and unreliable vendors.
@@ -134,7 +134,7 @@ export default function VideoSection() {
                   color: 'rgba(255,255,255,0.45)',
                   lineHeight: 1.8,
                   margin: '0 0 20px 0',
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                  fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                 }}>
                   We've sat in your shoes. We know what it's like to lose a deal because
                   a lead sat in a queue for four hours. We know the frustration of paying
@@ -145,7 +145,7 @@ export default function VideoSection() {
                   color: 'rgba(255,255,255,0.45)',
                   lineHeight: 1.8,
                   margin: 0,
-                  fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                  fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                 }}>
                   That's why we built AutoMaster Suite—a single platform designed specifically
                   for automotive retail, by people who've worked the desk, managed the BDC,
@@ -176,7 +176,7 @@ export default function VideoSection() {
                       backgroundClip: 'text',
                       lineHeight: 1,
                       marginBottom: '6px',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                      fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                       letterSpacing: '-0.02em',
                     }}>
                       {stat.num}
@@ -185,7 +185,7 @@ export default function VideoSection() {
                       fontSize: '13px',
                       fontWeight: 500,
                       color: 'rgba(255,255,255,0.4)',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                      fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                     }}>
                       {stat.label}
                     </span>
@@ -245,7 +245,7 @@ export default function VideoSection() {
                       fontSize: '12px',
                       fontWeight: 500,
                       color: 'rgba(255,255,255,0.5)',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                      fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                       textTransform: 'uppercase',
                       letterSpacing: '0.1em',
                     }}>
@@ -255,7 +255,7 @@ export default function VideoSection() {
                   <span style={{
                     fontSize: '12px',
                     color: 'rgba(255,255,255,0.3)',
-                    fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                    fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                   }}>
                     2:45
                   </span>
@@ -342,7 +342,7 @@ export default function VideoSection() {
                       fontSize: '13px',
                       fontWeight: 700,
                       color: '#f97316',
-                      fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                      fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                     }}>
                       WV
                     </div>
@@ -351,7 +351,7 @@ export default function VideoSection() {
                         fontSize: '14px',
                         fontWeight: 600,
                         color: 'white',
-                        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                        fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                         marginBottom: '2px',
                       }}>
                         William Voyles
@@ -359,7 +359,7 @@ export default function VideoSection() {
                       <div style={{
                         fontSize: '12px',
                         color: 'rgba(255,255,255,0.5)',
-                        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                        fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                       }}>
                         Chief Sales Officer
                       </div>

@@ -195,7 +195,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
           fontSize: '72px',
           fontWeight: 700,
           color: 'rgba(255,255,255,0.04)',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           lineHeight: 1,
           transition: 'color 0.4s ease',
         }} className="group-hover:!text-white/[0.06]">
@@ -210,7 +210,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
         fontWeight: 700,
         margin: '0 0 12px',
         letterSpacing: '-0.02em',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
       }}>
         {item.title}
       </h3>
@@ -221,7 +221,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
         fontSize: '16px',
         lineHeight: 1.7,
         margin: '0',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+        fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
         flex: 1,
       }}>
         {item.description}
@@ -248,7 +248,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               letterSpacing: '-0.02em',
               lineHeight: 1,
             }}>
@@ -258,7 +258,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
               color: 'rgba(255,255,255,0.4)',
               fontSize: '13px',
               fontWeight: 500,
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
             }}>
@@ -275,7 +275,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               letterSpacing: '-0.02em',
               lineHeight: 1,
             }}>
@@ -285,7 +285,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
               color: 'rgba(255,255,255,0.4)',
               fontSize: '13px',
               fontWeight: 500,
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               textTransform: 'uppercase',
               letterSpacing: '0.05em',
             }}>
@@ -314,7 +314,7 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
           color: '#f97316',
           fontSize: '14px',
           fontWeight: 600,
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           transition: 'color 0.3s ease',
         }}>
           Learn more
@@ -392,7 +392,7 @@ export default function PlatformSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-20 md:mb-24 lg:mb-32"
+          className="text-center mb-24 md:mb-32 lg:mb-40"
         >
           {/* Eyebrow with lines */}
           <div style={{
@@ -412,7 +412,7 @@ export default function PlatformSection() {
               fontWeight: 600,
               textTransform: 'uppercase',
               letterSpacing: '0.2em',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
             }}>
               The AutoMaster Suite
             </span>
@@ -430,7 +430,7 @@ export default function PlatformSection() {
             lineHeight: 1.15,
             letterSpacing: '-0.03em',
             margin: '0 0 24px',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           }}>
             Five AI Tools.<br />
             <span style={{ color: 'white' }}>One Unified System.</span>
@@ -440,8 +440,8 @@ export default function PlatformSection() {
             fontSize: '18px',
             lineHeight: 1.7,
             maxWidth: '680px',
-            margin: '0 auto',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+            margin: '0 auto 64px',
+            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           }}>
             An AI toolkit for car dealerships designed to drive more revenue by capturing more leads, converting more buyers, and retaining customers across sales and service.
           </p>

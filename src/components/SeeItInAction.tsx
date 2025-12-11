@@ -103,8 +103,8 @@ export default function SeeItInAction() {
   };
 
   return (
-    <section style={{ padding: "80px 0", backgroundColor: "#0a0a0a" }}>
-      
+    <section style={{ padding: "120px 0 100px", backgroundColor: "#0a0a0a" }}>
+
       {/* Audio Modal - Dealership Call Log Style */}
       {isModalOpen && (
         <div 
@@ -175,13 +175,13 @@ export default function SeeItInAction() {
                     fontSize: "18px",
                     fontWeight: 600,
                     margin: 0,
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                   }}>Inbound Service Call</h3>
                   <p style={{
                     color: "rgba(255,255,255,0.5)",
                     fontSize: "13px",
                     margin: "2px 0 0",
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                   }}>Today at 2:34 PM • 01:47 duration</p>
                 </div>
               </div>
@@ -456,8 +456,8 @@ export default function SeeItInAction() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
         
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "64px", position: "relative" }}>
-          
+        <div style={{ textAlign: "center", marginBottom: "72px", position: "relative" }}>
+
           {/* Background radial glow */}
           <div style={{
             position: "absolute",
@@ -511,10 +511,10 @@ export default function SeeItInAction() {
           </div>
           
           {/* Main Heading with shimmer */}
-          <h2 style={{ 
-            fontSize: "clamp(36px, 6vw, 56px)", 
-            fontWeight: 700, 
-            margin: "0 0 16px 0",
+          <h2 style={{
+            fontSize: "clamp(36px, 6vw, 56px)",
+            fontWeight: 700,
+            margin: "0 0 20px 0",
             letterSpacing: "-0.03em",
             lineHeight: 1.1,
             background: "linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #f97316 50%, #ffffff 60%, #ffffff 100%)",
@@ -522,16 +522,18 @@ export default function SeeItInAction() {
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            animation: "shimmer 5s linear infinite"
+            animation: "shimmer 5s linear infinite",
+            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
           }}>
             See It In Action
           </h2>
-          
-          <p style={{ 
-            color: "rgba(255,255,255,0.5)", 
-            fontSize: "18px", 
+
+          <p style={{
+            color: "rgba(255,255,255,0.55)",
+            fontSize: "19px",
             margin: 0,
-            fontWeight: 400
+            fontWeight: 400,
+            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
           }}>
             Watch how AutoMaster Suite handles real conversations — 24/7
           </p>
@@ -542,66 +544,82 @@ export default function SeeItInAction() {
           <style>{`
             .premium-tab {
               position: relative;
-              padding: 20px 40px;
-              font-size: 14px;
-              font-weight: 500;
-              letter-spacing: 0.1em;
+              padding: 18px 36px;
+              font-size: 13px;
+              font-weight: 600;
+              letter-spacing: 0.12em;
               text-transform: uppercase;
               border: none;
               cursor: pointer;
-              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
               background: transparent;
-              color: rgba(255,255,255,0.35);
+              color: rgba(255,255,255,0.4);
               overflow: hidden;
+              font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
             }
             .premium-tab::before {
               content: '';
               position: absolute;
               bottom: 0;
-              left: 50%;
-              transform: translateX(-50%) scaleX(0);
-              width: 100%;
+              left: 0;
+              right: 0;
               height: 2px;
               background: linear-gradient(90deg, transparent, #f97316, transparent);
-              transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              transform: scaleX(0);
+              transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .premium-tab::after {
+              content: '';
+              position: absolute;
+              inset: 0;
+              background: radial-gradient(circle at center, rgba(249,115,22,0.08), transparent 70%);
+              opacity: 0;
+              transition: opacity 0.35s ease;
             }
             .premium-tab:hover {
-              color: rgba(255,255,255,0.7);
+              color: rgba(255,255,255,0.8);
+              background: rgba(255,255,255,0.02);
             }
             .premium-tab:hover::before {
-              transform: translateX(-50%) scaleX(0.5);
+              transform: scaleX(0.6);
+            }
+            .premium-tab:hover::after {
+              opacity: 0.5;
             }
             .premium-tab.active {
               color: white;
+              background: linear-gradient(135deg, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0.06) 100%);
+              box-shadow:
+                inset 0 0 20px rgba(249,115,22,0.1),
+                0 8px 32px rgba(249,115,22,0.15);
             }
             .premium-tab.active::before {
-              transform: translateX(-50%) scaleX(1);
-              background: #f97316;
+              transform: scaleX(1);
+              background: linear-gradient(90deg, rgba(249,115,22,0.5), #f97316, rgba(249,115,22,0.5));
+              box-shadow: 0 0 20px rgba(249,115,22,0.6);
             }
             .premium-tab.active::after {
-              content: '';
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              transform: translateX(-50%);
-              width: 60%;
-              height: 20px;
-              background: rgba(249,115,22,0.3);
-              filter: blur(10px);
+              opacity: 1;
             }
           `}</style>
-          <div style={{ 
-            display: "flex", 
-            background: "linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 100%)",
-            borderRadius: "20px",
-            padding: "8px",
-            border: "1px solid rgba(255,255,255,0.05)"
+          <div style={{
+            display: "inline-flex",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%)",
+            borderRadius: "16px",
+            padding: "6px",
+            border: "1px solid rgba(255,255,255,0.08)",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.03)",
+            backdropFilter: "blur(10px)",
+            gap: "4px"
           }}>
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`premium-tab ${activeTab === tab.id ? 'active' : ''}`}
+                style={{
+                  borderRadius: "12px",
+                }}
               >
                 {tab.label}
               </button>
@@ -656,7 +674,7 @@ export default function SeeItInAction() {
                       fontSize: "16px", 
                       fontWeight: 500,
                       whiteSpace: "nowrap",
-                      fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                      fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                     }}>Listen to a Call Here</span>
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"/>
@@ -726,7 +744,7 @@ export default function SeeItInAction() {
                         color: "white", 
                         fontSize: "16px", 
                         fontWeight: 600,
-                        fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                        fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                       }}>21:55</span>
                       <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                         {/* Cellular */}
@@ -801,7 +819,7 @@ export default function SeeItInAction() {
                           color: "white", 
                           fontWeight: 700, 
                           fontSize: "15px",
-                          fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                          fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                         }}>AI</span>
                       </div>
                       
@@ -811,7 +829,7 @@ export default function SeeItInAction() {
                           fontWeight: 600, 
                           fontSize: "17px", 
                           margin: 0,
-                          fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                          fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                         }}>AutoMaster AI</p>
                         <div style={{ display: "flex", alignItems: "center", gap: "6px", marginTop: "2px" }}>
                           <span style={{ 
@@ -824,7 +842,7 @@ export default function SeeItInAction() {
                           <span style={{ 
                             color: "#34c759", 
                             fontSize: "13px",
-                            fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                           }}>Online</span>
                         </div>
                       </div>
@@ -875,13 +893,13 @@ export default function SeeItInAction() {
                             margin: 0, 
                             textTransform: "uppercase", 
                             letterSpacing: "0.08em",
-                            fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                           }}>Live Recording</p>
                           <p style={{ 
                             color: "rgba(255,255,255,0.5)", 
                             fontSize: "12px", 
                             margin: "2px 0 0",
-                            fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                           }}>{formatTime(callSeconds)} • Inbound Call</p>
                         </div>
                         {/* Animated waveform */}
@@ -950,7 +968,7 @@ export default function SeeItInAction() {
                               textTransform: "uppercase",
                               letterSpacing: "0.08em",
                               boxShadow: "0 2px 10px rgba(249,115,22,0.15)",
-                              fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                              fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                             }}>
                               {msg.text}
                             </span>
@@ -981,7 +999,7 @@ export default function SeeItInAction() {
                                   ? "0 3px 12px rgba(249,115,22,0.3)" 
                                   : "0 2px 8px rgba(0,0,0,0.3)",
                                 border: "1px solid rgba(255,255,255,0.1)",
-                                fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                               }}>
                                 {msg.sender === "ai" ? "AI" : content.customerName.charAt(0)}
                               </div>
@@ -1001,7 +1019,7 @@ export default function SeeItInAction() {
                                 boxShadow: msg.sender === "ai" 
                                   ? "0 4px 16px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08)" 
                                   : "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
-                                fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
+                                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
                                 fontWeight: 400
                               }}>
                                 {msg.text}
@@ -1046,7 +1064,7 @@ export default function SeeItInAction() {
                           <span style={{ 
                             color: "rgba(255,255,255,0.35)", 
                             fontSize: "15px",
-                            fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                            fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                           }}>Message</span>
                         </div>
                         <div style={{ 
@@ -1085,27 +1103,27 @@ export default function SeeItInAction() {
           {/* Content */}
           <div style={{ paddingLeft: "20px" }}>
             {/* Headline */}
-            <h3 style={{ 
-              color: "white", 
-              fontSize: "clamp(32px, 5vw, 52px)", 
-              fontWeight: 700, 
-              marginBottom: "24px", 
+            <h3 style={{
+              color: "white",
+              fontSize: "clamp(32px, 5vw, 48px)",
+              fontWeight: 700,
+              marginBottom: "28px",
               marginTop: 0,
               letterSpacing: "-0.03em",
-              lineHeight: 1.1,
-              fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+              lineHeight: 1.15,
+              fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
             }}>
               {content.headline}
             </h3>
-            
+
             {/* Body */}
-            <p style={{ 
-              color: "rgba(255,255,255,0.55)", 
-              fontSize: "18px", 
-              lineHeight: 1.8, 
-              marginBottom: "40px",
-              maxWidth: "480px",
-              fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+            <p style={{
+              color: "rgba(255,255,255,0.58)",
+              fontSize: "18px",
+              lineHeight: 1.75,
+              marginBottom: "44px",
+              maxWidth: "500px",
+              fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
             }}>
               {content.body}
             </p>
@@ -1133,28 +1151,28 @@ export default function SeeItInAction() {
                   }}>
                     <Check style={{ width: "16px", height: "16px", color: "#f97316" }} strokeWidth={2.5} />
                   </div>
-                  <span style={{ 
-                    color: "rgba(255,255,255,0.9)", 
-                    fontWeight: 500, 
+                  <span style={{
+                    color: "rgba(255,255,255,0.9)",
+                    fontWeight: 500,
                     fontSize: "17px",
-                    fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif"
+                    fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif"
                   }}>{stat}</span>
                 </li>
               ))}
             </ul>
             
             {/* CTA Button */}
-            <a 
-              href={content.cta.href} 
-              style={{ 
-                display: "inline-flex", 
-                alignItems: "center", 
-                gap: "10px", 
+            <a
+              href={content.cta.href}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
                 color: "#f97316",
-                fontWeight: 500, 
-                textDecoration: "none", 
+                fontWeight: 500,
+                textDecoration: "none",
                 fontSize: "15px",
-                fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
+                fontFamily: "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
                 letterSpacing: "0.01em",
                 transition: "all 0.3s ease",
                 paddingBottom: "2px",

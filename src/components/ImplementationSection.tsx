@@ -161,7 +161,7 @@ function TimelineCard({ step, index }: { step: typeof steps[0]; index: number })
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           lineHeight: 0.8,
           letterSpacing: '-0.05em',
         }}>
@@ -188,7 +188,7 @@ function TimelineCard({ step, index }: { step: typeof steps[0]; index: number })
           fontWeight: 700,
           textTransform: 'uppercase',
           letterSpacing: '0.12em',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
         }}>
           {step.eyebrow}
         </span>
@@ -201,7 +201,7 @@ function TimelineCard({ step, index }: { step: typeof steps[0]; index: number })
         fontWeight: 700,
         margin: '0 0 12px',
         letterSpacing: '-0.02em',
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+        fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
       }}>
         {step.title}
       </h3>
@@ -212,7 +212,7 @@ function TimelineCard({ step, index }: { step: typeof steps[0]; index: number })
         fontSize: '14px',
         lineHeight: 1.7,
         margin: 0,
-        fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+        fontFamily: 'var(--font-body), Inter, -apple-system, BlinkMacSystemFont, sans-serif',
         flex: 1,
       }}>
         {step.description}
@@ -289,7 +289,7 @@ function TimelineDot({ index, days }: { index: number; days: string }) {
           fontWeight: 600,
           color: 'white',
           letterSpacing: '0.1em',
-          fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           whiteSpace: 'nowrap',
           textShadow: '0 1px 2px rgba(0,0,0,0.3)',
         }}>
@@ -390,7 +390,7 @@ export default function ImplementationSection() {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.25em',
-              fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+              fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
             }}>
               Implementation
             </span>
@@ -408,7 +408,7 @@ export default function ImplementationSection() {
             lineHeight: 1.1,
             letterSpacing: '-0.03em',
             margin: '0 0 24px',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           }}>
             From Signup to{' '}
             <span style={{
@@ -428,7 +428,7 @@ export default function ImplementationSection() {
             lineHeight: 1.7,
             maxWidth: '600px',
             margin: '0 auto',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+            fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
           }}>
             No lengthy IT projects. No complex migrations. Our white-glove onboarding ensures you're generating results within two weeks.
           </p>
@@ -534,7 +534,7 @@ export default function ImplementationSection() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
                 letterSpacing: '-0.04em',
                 lineHeight: 1,
                 marginBottom: '12px',
@@ -547,7 +547,7 @@ export default function ImplementationSection() {
                 color: 'rgba(255,255,255,0.4)',
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+                fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
               }}>
                 {stat.label}
               </div>
