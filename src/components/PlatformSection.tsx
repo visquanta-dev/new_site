@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const capabilities = [
   {
@@ -12,6 +13,7 @@ const capabilities = [
     statLabel: 'higher conversion',
     stat2: '<60s',
     stat2Label: 'response time',
+    link: '/products/speed-to-lead',
     icon: (
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -26,6 +28,7 @@ const capabilities = [
     statLabel: 're-engagement',
     stat2: '5-11%',
     stat2Label: 'sales increase',
+    link: '/products/lead-reactivation',
     icon: (
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -40,6 +43,7 @@ const capabilities = [
     statLabel: 'availability',
     stat2: '3x',
     stat2Label: 'more leads',
+    link: '/products/website-widget',
     icon: (
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -54,6 +58,7 @@ const capabilities = [
     statLabel: 'response time',
     stat2: '75%',
     stat2Label: 'more reviews',
+    link: '/products/reputation-management',
     icon: (
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
@@ -68,6 +73,7 @@ const capabilities = [
     statLabel: 'calls answered',
     stat2: '24/7',
     stat2Label: 'availability',
+    link: '/products/service-drive-ai',
     icon: (
       <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
         <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -111,7 +117,6 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
         border: '1px solid rgba(255,255,255,0.1)',
         transition: 'all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1)',
         cursor: 'pointer',
-        overflow: 'hidden',
         boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.05)',
         display: 'flex',
         flexDirection: 'column',
@@ -290,37 +295,46 @@ function CapabilityCard({ item, index }: { item: typeof capabilities[0]; index: 
         </div>
       </div>
 
-      {/* Learn more link - appears on hover */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: '6px',
-        marginTop: '16px',
-        opacity: 0,
-        transform: 'translateY(8px)',
-        transition: 'all 0.4s ease',
-      }} className="group-hover:opacity-100 group-hover:translate-y-0">
+      {/* Learn more link - always visible */}
+      <Link 
+        href={item.link}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          marginTop: '20px',
+          paddingTop: '16px',
+          textDecoration: 'none',
+          transition: 'all 0.3s ease',
+          position: 'relative',
+          zIndex: 10,
+        }}
+      >
         <span style={{
           color: '#f97316',
           fontSize: '14px',
-          fontWeight: 500,
+          fontWeight: 600,
           fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
+          transition: 'color 0.3s ease',
         }}>
           Learn more
         </span>
         <svg 
-          width="16" 
-          height="16" 
+          width="18" 
+          height="18" 
           viewBox="0 0 24 24" 
           fill="none" 
           stroke="#f97316" 
           strokeWidth="2" 
           strokeLinecap="round" 
           strokeLinejoin="round"
+          style={{
+            transition: 'transform 0.3s ease',
+          }}
         >
           <path d="M5 12h14M12 5l7 7-7 7" />
         </svg>
-      </div>
+      </Link>
     </motion.div>
   );
 }
@@ -349,7 +363,7 @@ export default function PlatformSection() {
   return (
     <section 
       ref={sectionRef}
-      className="py-16 md:py-24 lg:py-32 relative overflow-hidden"
+      className="pt-32 pb-24 md:pt-40 md:pb-32 lg:pt-48 lg:pb-40 relative overflow-hidden"
       style={{
         backgroundColor: '#0a0a0a',
       }}
@@ -378,7 +392,7 @@ export default function PlatformSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-12 md:mb-16 lg:mb-20"
+          className="text-center mb-20 md:mb-24 lg:mb-32"
         >
           {/* Eyebrow with lines */}
           <div style={{
@@ -419,10 +433,10 @@ export default function PlatformSection() {
             fontFamily: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
           }}>
             Five AI Tools.<br />
-            <span style={{ color: 'rgba(255,255,255,0.5)' }}>One Unified System.</span>
+            <span style={{ color: 'white' }}>One Unified System.</span>
           </h2>
           <p style={{
-            color: 'rgba(255,255,255,0.5)',
+            color: 'rgba(255,255,255,0.8)',
             fontSize: '18px',
             lineHeight: 1.7,
             maxWidth: '680px',

@@ -7903,15 +7903,341 @@ body {
     align-items: center;
   }
 }
-/* SPACING FIX */
-section > div {
-  padding-left: 64px !important;
-  padding-right: 64px !important;
+
+.fcta-trust-item svg {
+  width: 16px;
+  height: 16px;
+  color: var(--amber);
+}
+
+.fcta-trust-item span {
+  font-family: var(--font-body), "Inter", sans-serif;
+  font-size: 13px;
+  color: var(--chrome);
 }
 
 @media (max-width: 768px) {
-  section > div {
+  .fcta-card {
+    padding: 48px 28px;
+  }
+
+  .fcta-trust {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+/* ========== MASTER SPACING SYSTEM ========== */
+
+/* ===== SECTION VERTICAL PADDING ===== */
+.platform-section,
+.automaster-section,
+.sia-section,
+.hiw-section,
+.rp-section,
+.int-section,
+.faq-section,
+.testimonials-section,
+.case-studies-section,
+.integrations-section,
+.trust-section,
+.who-we-are-section,
+.spb-section {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+/* Hero needs more top padding for nav */
+.hero {
+  min-height: 100vh;
+}
+
+.hero-content {
+  padding-top: 180px !important;
+  padding-bottom: 120px !important;
+}
+
+/* ===== SECTION HEADERS ===== */
+.platform-header,
+.am-section-header,
+.sia-header,
+.hiw-header,
+.rp-header,
+.faq-header,
+.testimonials-header,
+.case-studies-header,
+.integrations-header,
+.int-header,
+.wwa-header {
+  margin-bottom: 100px !important;
+}
+
+/* ===== CONTENT CONTAINERS ===== */
+.am-container {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+/* ===== INNER SECTION SPACING ===== */
+.am-hero {
+  margin-bottom: 160px !important;
+}
+
+.am-integrations {
+  margin-top: 100px !important;
+  margin-bottom: 160px !important;
+  padding: 80px 0 !important;
+}
+
+.am-problem-section-v2,
+.am-solution-section-v2 {
+  margin-bottom: 160px !important;
+  padding: 100px 0 !important;
+}
+
+.am-products-section,
+.am-blog-section {
+  margin-bottom: 140px !important;
+}
+
+/* ===== GRIDS - Space from headers ===== */
+.products-grid,
+.am-problem-grid-v2,
+.am-solution-grid,
+.rp-bento,
+.rp-stats-row,
+.testimonials-grid,
+.case-studies-grid,
+.int-logos-grid,
+.hiw-steps-wrapper,
+.faq-grid,
+.sia-content {
+  margin-top: 80px !important;
+}
+
+/* ===== TYPOGRAPHY SPACING ===== */
+/* Eyebrows */
+.platform-eyebrow,
+.am-section-eyebrow,
+.sia-eyebrow,
+.hiw-eyebrow,
+.rp-eyebrow,
+.am-badge,
+.am-problem-badge,
+.am-solution-badge {
+  margin-bottom: 32px !important;
+}
+
+/* Titles */
+.platform-title,
+.am-section-title,
+.am-headline,
+.am-problem-headline,
+.am-solution-headline,
+.sia-title,
+.hiw-title,
+.rp-title,
+.faq-title,
+.testimonials-title,
+.case-studies-title,
+.int-title {
+  margin-bottom: 24px !important;
+}
+
+/* Subtitles */
+.platform-subtitle,
+.am-subheadline,
+.am-problem-subtext,
+.am-solution-subtext,
+.sia-subtitle,
+.hiw-subtitle,
+.rp-subtitle,
+.faq-subtitle,
+.testimonials-subtitle,
+.case-studies-subtitle,
+.int-desc {
+  margin-bottom: 0 !important;
+}
+
+/* ===== FIVE AI TOOLS CARDS ===== */
+.products-grid {
+  gap: 3px !important;
+  margin-top: 80px !important;
+}
+
+.product-card {
+  padding: 56px 48px !important;
+}
+
+/* ===== SEE IT IN ACTION ===== */
+.sia-section {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+.sia-tabs {
+  margin-bottom: 80px !important;
+}
+
+.sia-content {
+  gap: 100px !important;
+}
+
+/* ===== HOW IT WORKS ===== */
+.hiw-section {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+.hiw-steps {
+  gap: 48px !important;
+}
+
+.hiw-summary {
+  margin-top: 100px !important;
+}
+
+/* ===== RESULTS/PROOF ===== */
+.rp-section {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+.rp-stats-row {
+  margin-bottom: 40px !important;
+}
+
+.rp-testimonials-row {
+  margin-top: 40px !important;
+}
+
+/* ===== INTEGRATIONS ===== */
+.int-section {
+  padding-top: 160px !important;
+  padding-bottom: 160px !important;
+}
+
+.int-header {
+  margin-bottom: 80px !important;
+}
+
+.int-trust {
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  padding-top: 140px !important;
+  padding-bottom: 140px !important;
+}
+
+.faq-grid {
+  margin-top: 60px !important;
+}
+
+.faq-cta {
+  margin-top: 80px !important;
+}
+
+/* ===== FINAL CTA ===== */
+.fcta-section {
+  padding-top: 140px !important;
+  padding-bottom: 160px !important;
+}
+
+.fcta-card {
+  padding: 100px 80px !important;
+}
+
+/* ===== HORIZONTAL PADDING ===== */
+.am-container,
+.sia-container,
+.hiw-container,
+.rp-container,
+.int-container,
+.faq-container,
+.testimonials-container,
+.case-studies-container,
+.fcta-container {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+}
+
+@media (max-width: 1024px) {
+  .am-container,
+  .sia-container,
+  .hiw-container,
+  .rp-container,
+  .int-container,
+  .faq-container,
+  .testimonials-container,
+  .case-studies-container,
+  .fcta-container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  
+  /* Reduce vertical padding on mobile */
+  .platform-section,
+  .automaster-section,
+  .sia-section,
+  .hiw-section,
+  .rp-section,
+  .int-section,
+  .faq-section,
+  .am-container {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+  }
+  
+  .platform-header,
+  .am-section-header,
+  .sia-header,
+  .hiw-header,
+  .rp-header,
+  .int-header {
+    margin-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .am-container,
+  .sia-container,
+  .hiw-container,
+  .rp-container,
+  .int-container,
+  .faq-container,
+  .fcta-container {
     padding-left: 24px !important;
     padding-right: 24px !important;
   }
+  
+  .platform-section,
+  .automaster-section,
+  .sia-section,
+  .hiw-section,
+  .rp-section,
+  .int-section,
+  .faq-section,
+  .am-container {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+  
+  .fcta-card {
+    padding: 60px 32px !important;
+  }
+}
+/* Five AI Tools Section - Top spacing from logo bar */
+.platform-section {
+  padding-top: 180px !important;
+  margin-top: 0 !important;
+}
+
+/* Logo marquee bar - bottom spacing */
+.spb-section,
+.trust-section {
+  padding-bottom: 80px !important;
 }

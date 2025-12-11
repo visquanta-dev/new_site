@@ -28,6 +28,7 @@ const navItems: NavItem[] = [
     children: [
       { label: 'Independent Dealerships', href: '/independent-dealers', description: 'Solutions for independents' },
       { label: 'Franchise Dealerships', href: '/franchise-dealers', description: 'Enterprise-grade tools' },
+      { label: 'Pre-Owned Dealers', href: '/pre-owned-dealers', description: 'Used car specialists' },
       { label: 'Auto Groups', href: '/auto-group', description: 'Multi-rooftop management' },
     ]
   },
@@ -66,7 +67,6 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
